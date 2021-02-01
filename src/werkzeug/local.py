@@ -2,8 +2,8 @@ import copy
 import math
 import operator
 import typing as t
-from functools import partial
 import warnings
+from functools import partial
 from functools import update_wrapper
 
 from .wsgi import ClosingIterator
@@ -96,7 +96,9 @@ class Local:
     @property
     def __storage__(self):
         warnings.warn(
-            "__storage__ is deprecated", DeprecationWarning, stacklevel=2,
+            "__storage__ is deprecated",
+            DeprecationWarning,
+            stacklevel=2,
         )
         return self._storage.get({})
 

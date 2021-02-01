@@ -41,7 +41,8 @@ def test_basic_local():
 
 
 @pytest.mark.skipif(
-    sys.version_info < (3, 7), reason="Locals are not task local in Python 3.6",
+    sys.version_info < (3, 7),
+    reason="Locals are not task local in Python 3.6",
 )
 def test_basic_local_asyncio():
     ns = local.Local()
